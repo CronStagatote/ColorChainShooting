@@ -1,0 +1,279 @@
+◇ ゲーム名 ◇
+Color Chain Shooting
+
+◇ ジャンル ◇
+シューティング
+
+◇ 開発環境 ◇
+visual stdio 2017 community 
+DXlib. 
+C++言語
+
+◇ 動作環境（動作確認済みの環境） ◇
+windows10
+
+◇ 注意事項 ◇
+exeフォルダ内のlauncher.exeをダブルクリックでゲームが開きます。
+readme.txtは簡単な説明です。
+制作ツール、スタッフリスト等.txtはその名の通り、スタッフリストや、著作権表示です。
+このメモは詳細な説明です。
+これら以外はいじらないでください。
+この操作以外のことをした場合の不具合については一切責任を取りません。
+
+
+◇ モードの解説 ◇
+・タイトル画面
+　ここから、一人用の1Player Modeと、二人用の2Player Mode、その他情報が載っているContents
+に移動できます。
+
+・1Player Mode
+　1人で点数を稼ぐモードです。終了時にランキングが出ます（1～10位）。クリア条件は
+ステージ11をクリアすることです。各ステージのクリア条件は、敵機の全滅です。ただし、
+ステージ3,6,9,11については、ボスを倒すことがクリア条件です。
+逆に、HPが0になるとゲームオーバーです。（MaxHPは30で、ステージクリア時に5回復）
+ステージクリア時にQキーを押すと、その時点でゲームを終了することもできます。
+敵機には、通常ステージでは最大8種類存在していて、それぞれに特徴があります。これは、
+Contents内の敵の種類と特徴を選択することでも確認できますが、以下の通りです。
+赤:狙う場所:真下
+青:狙う場所:自機左
+黄:狙う場所:自機右
+緑:狙う場所:自機
+橙:狙う場所:左
+紫:狙う場所:右
+赤紫:攻撃しない
+空:狙う場所:真下
+
+3種類のショットとコンボについて
+  ショットは3種類あり、それぞれZ,X,Cキーで撃つことができます。しかし、これら3種類の
+ショットは、最初はどれも同じものです。ショットによって敵機を倒した場合、そのショットに
+色が付きます。例えば、赤の機体を倒せば、赤のショットになります。ショットの色と同じ色の
+敵機を倒すと、得点が倍になります。例えば、赤のショットで赤の機体を倒せば、得点が
+増えます。同じ色のショットで同じ色の機体を倒し続ければ、さらに得点は上がります。
+この、何回連続で同じ色の機体を倒したかを表すのが、コンボです。
+コンボを増やすと、そのコンボ数分さらにボーナス点が入ります。
+
+操作説明
+RIGHTキー:右に進む
+LEFTキー:左に進む
+Zキー:ショット1
+Xキー:ショット2
+Cキー:ショット3
+
+
+・2Player Mode
+  2人で得点を競い合うモードです。このモードはHPがない代わり、敵の弾に当たると得点が
+10点マイナスされます。ステージ数は5で、最終ステージはボスステージになっています。
+また、コンボ時の得点が、2倍でなく3倍になります。一方のプレイヤーが
+先に5ステージクリアした場合、もう一方のプレイヤーは先にクリアしたプレイヤーの60カウント
+後までにクリアしなかった場合、強制終了となります。しかし、勝敗はあくまで得点によるもの
+であるので、クリアできなかった方のプレイヤーが勝利することもあります。
+ただし、同点の場合、クリアできた方の勝ちとなります。同点かつ両者ともにクリアした場合、
+引き分けとなります（たとえ片方が残り1カウントでクリアしたとしても）。
+各ステージは両者独立、かつ連続して始まるので気をつけてください。
+
+操作説明
+Player1(左)
+Bキー:右に進む
+Cキー:左に進む
+Qキー:ショット1
+Wキー:ショット2
+Eキー:ショット3
+
+Player2(右)
+RIGHTキー:右に進む
+LEFTキー:左に進む
+Iキー:ショット1
+Oキー:ショット2
+Pキー:ショット3
+
+
+・Contents
+1Player Modeのランキング表と、敵機の種類、操作説明が読めます。
+1Player Modeのランキング表を開いたまま、隠しコマンド F A L S E キーを同時に押すと、
+ランキングデータを消去することができます。
+
+◇ スタッフ ◇
+　・プログラム　長屋佳寿
+
+◇ 連絡責任者連絡先 ◇
+　長屋佳寿 E-mail :stagatote255@gmail.com
+
+◇ 使用素材の著作権表示 ◇
+
+・DXライブラリ
+ l　libjpeg　Copyright (C) 1991-2013, Thomas G. Lane, Guido Vollbeding.
+　　　this software is based in part on the work of the Independent JPEG Group
+
+
+　　　libpng　Copyright (C) 2004, 2006-2012 Glenn Randers-Pehrson.
+　　　zlib　Copyright (C) 1995-2012 Jean-loup Gailly and Mark Adler.
+
+
+　　　libtiff　Copyright (c) 1988-1997 Sam Leffler
+　　　libtiff　Copyright (c) 1991-1997 Silicon Graphics, Inc.
+
+　　　Permission to use, copy, modify, distribute, and sell this software and 
+　　　its documentation for any purpose is hereby granted without fee, provided
+　　　that (i) the above copyright notices and this permission notice appear in
+　　　all copies of the software and related documentation, and (ii) the names of
+　　　Sam Leffler and Silicon Graphics may not be used in any advertising or
+　　　publicity relating to the software without the specific, prior written
+　　　permission of Sam Leffler and Silicon Graphics.
+
+　　　THE SOFTWARE IS PROVIDED "AS-IS" AND WITHOUT WARRANTY OF ANY KIND, 
+　　　EXPRESS, IMPLIED OR OTHERWISE, INCLUDING WITHOUT LIMITATION, ANY 
+　　　WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. 
+
+　　　IN NO EVENT SHALL SAM LEFFLER OR SILICON GRAPHICS BE LIABLE FOR
+　　　ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND,
+　　　OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+　　　WHETHER OR NOT ADVISED OF THE POSSIBILITY OF DAMAGE, AND ON ANY THEORY OF 
+　　　LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE 
+　　　OF THIS SOFTWARE.
+
+
+　　　libogg　Copyright (C) 2002-2009 Xiph.org Foundation
+
+　　　Redistribution and use in source and binary forms, with or without
+　　　modification, are permitted provided that the following conditions
+　　　are met:
+
+　　　- Redistributions of source code must retain the above copyright
+　　　notice, this list of conditions and the following disclaimer.
+
+　　　- Redistributions in binary form must reproduce the above copyright
+　　　notice, this list of conditions and the following disclaimer in the
+　　　documentation and/or other materials provided with the distribution.
+
+　　　- Neither the name of the Xiph.org Foundation nor the names of its
+　　　contributors may be used to endorse or promote products derived from
+　　　this software without specific prior written permission.
+
+　　　THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+　　　``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+　　　LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+　　　A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE FOUNDATION
+　　　OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+　　　SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+　　　LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+　　　DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+　　　THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+　　　(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+　　　OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+　　　Opus audio codec
+　　　Copyright 2001-2011 Xiph.Org, Skype Limited, Octasic,
+　　　 Jean-Marc Valin, Timothy B. Terriberry,
+　　　 CSIRO, Gregory Maxwell, Mark Borgerding,
+　　　 Erik de Castro Lopo
+
+　　　Redistribution and use in source and binary forms, with or without
+　　　modification, are permitted provided that the following conditions
+　　　are met:
+
+　　　- Redistributions of source code must retain the above copyright
+　　　notice, this list of conditions and the following disclaimer.
+
+　　　- Redistributions in binary form must reproduce the above copyright
+　　　notice, this list of conditions and the following disclaimer in the
+　　　documentation and/or other materials provided with the distribution.
+
+　　　- Neither the name of Internet Society, IETF or IETF Trust, nor the
+　　　names of specific contributors, may be used to endorse or promote
+　　　products derived from this software without specific prior written
+　　　permission.
+
+　　　THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+　　　``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+　　　LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+　　　A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER
+　　　OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+　　　EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+　　　PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+　　　PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+　　　LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+　　　NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+　　　SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+　　　Opusfile
+　　　Copyright (c) 1994-2013 Xiph.Org Foundation and contributors
+
+　　　Redistribution and use in source and binary forms, with or without
+　　　modification, are permitted provided that the following conditions
+　　　are met:
+
+　　　- Redistributions of source code must retain the above copyright
+　　　notice, this list of conditions and the following disclaimer.
+
+　　　- Redistributions in binary form must reproduce the above copyright
+　　　notice, this list of conditions and the following disclaimer in the
+　　　documentation and/or other materials provided with the distribution.
+
+　　　- Neither the name of the Xiph.Org Foundation nor the names of its
+　　　contributors may be used to endorse or promote products derived from
+　　　this software without specific prior written permission.
+
+　　　THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+　　　``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+　　　LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+　　　A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE FOUNDATION
+　　　OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+　　　SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+　　　LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+　　　DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+　　　THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+　　　(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+　　　OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+　　　Mersenne Twister
+　　　Copyright (C) 1997 - 2002, Makoto Matsumoto and Takuji Nishimura,
+　　　All rights reserved.
+
+　　　Redistribution and use in source and binary forms, with or without
+　　　modification, are permitted provided that the following conditions
+　　　are met:
+
+　　　1. Redistributions of source code must retain the above copyright
+　　　notice, this list of conditions and the following disclaimer.
+
+　　　2. Redistributions in binary form must reproduce the above copyright
+　　　notice, this list of conditions and the following disclaimer in the
+　　　documentation and/or other materials provided with the distribution.
+
+　　　3. The name of the author may not be used to endorse or promote products
+　　　derived from this software without specific prior written permission.
+
+　　　THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+　　　IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+　　　OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+　　　IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+　　　INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+　　　NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+　　　DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+　　　THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+　　　(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+　　　THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+　　　Bullet　Copyright (c) 2003-2006 Erwin Coumans.
+
+      DX Library Copyright (C) 2001-2017 Takumi Yamada.
+
+・使用した画像サイト
+
+    白螺子屋(http://hi79.web.fc2.com/) 
+
+・使用した音楽サイト
+
+    魔王魂　(http://maoudamashii.jokersounds.com/)
+
+
+◇ 最後に ◇
+　
+　作成に関係してくださった方々に深く感謝致します。
+　また、本作品を遊んでくださっている、皆様にも深く感謝致します。
+
+
